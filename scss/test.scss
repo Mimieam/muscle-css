@@ -1,0 +1,115 @@
+$globalMargin: 3px;
+/********************************************/
+
+* {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  width: 100%;
+  // height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: cornsilk;
+}
+
+/* bacground funcion from https://codepen.io/charlespeters/post/random-background-color-sass*/
+@mixin backgrounds($c, $bd, $y) {
+  background: $c;//rgb(random(256)-1, random(256)-1, random(256)-1);
+  @for $i from 1 through $y {
+    $k: 10%;
+    $j: $i - 1;
+
+    @if $i == 1 {
+      & :nth-child(#{$i}) { background: $c;
+        height: auto;
+
+      }
+    }
+    @else {
+      & :nth-child(#{$i}) {
+        background: darken($c, ($k * $j));
+        // border-color: lighten($bd, ($k * $j));
+        // flex: auto;
+        // width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+$main-color: coral;
+$main-border-color: #3CFFD8;
+// .row { @include backgrounds($main-color, $main-border-color, 10); }
+.flex-item { @include backgrounds($main-border-color, $main-border-color, 10); }
+
+/* .debug.row::after,
+.debug .row::after {
+  content: "Row";
+  position: absolute;
+  right: 2%;
+
+  border: 1px solid teal;
+  background: teal;
+  color: white;
+  border-radius: 3px;
+  opacity:0.9;
+  height: auto;
+  width: auto;
+} */
+.show_case{
+  // width: 100vw;
+  // height: 100vh;
+  width: auto;
+  border: 1px solid red;
+  border-radius: 5px;
+  // padding: 3px;
+
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+
+   & > div {
+    width: calc(100vw/4);
+    height: calc(100vw/4);
+    border-radius: 5px;
+      // padding: 3px;
+    margin: $globalMargin;
+    border: 1px solid tomato;
+    // overflow: hidden;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 900px)  {
+  .show_case{
+    height: 100%;
+  }
+}
+
+
+.overlay {
+  position:absolute;
+  height: calc(100vw/4/12) !important;
+  background: #ff6347;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  margin: -$globalMargin !important;
+  opacity: 0.8;
+}
+
+// div.flex-container,
+div.flex-item {
+  // width: auto;
+  // min-width: calc(100vw/4);
+  // max-width: calc(100vw/4);
+  // font-size: 1em;
+}

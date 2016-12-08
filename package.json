@@ -1,0 +1,29 @@
+{
+  "name": "muscle-css",
+  "version": "0.1.0",
+  "description": "A verbose micro css framework build on flex.",
+  "main": "Webpack.config.js",
+"scripts": {
+  "build": "node-sass -r scss/ -o dist/ ",
+  "watch": "nodemon -e scss -x \"npm run build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mimieam/muscle-css.git"
+  },
+  "keywords": [
+    "flex",
+    "css"
+  ],
+  "author": "Miezan Echimane",
+  "license": "MIT",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/Mimieam/muscle-css/issues"
+  },
+  "homepage": "https://github.com/Mimieam/muscle-css#readme",
+  "devDependencies": {
+    "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0"
+  }
+}

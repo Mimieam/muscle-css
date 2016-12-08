@@ -1,0 +1,91 @@
+/********************************************/
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%; }
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: cornsilk; }
+
+/* bacground funcion from https://codepen.io/charlespeters/post/random-background-color-sass*/
+.flex-item {
+  background: #3CFFD8; }
+  .flex-item :nth-child(1) {
+    background: #3CFFD8;
+    height: auto; }
+  .flex-item :nth-child(2) {
+    background: #09ffce;
+    height: auto; }
+  .flex-item :nth-child(3) {
+    background: #00d5aa;
+    height: auto; }
+  .flex-item :nth-child(4) {
+    background: #00a282;
+    height: auto; }
+  .flex-item :nth-child(5) {
+    background: #006f59;
+    height: auto; }
+  .flex-item :nth-child(6) {
+    background: #003c30;
+    height: auto; }
+  .flex-item :nth-child(7) {
+    background: #000907;
+    height: auto; }
+  .flex-item :nth-child(8) {
+    background: black;
+    height: auto; }
+  .flex-item :nth-child(9) {
+    background: black;
+    height: auto; }
+  .flex-item :nth-child(10) {
+    background: black;
+    height: auto; }
+
+/* .debug.row::after,
+.debug .row::after {
+  content: "Row";
+  position: absolute;
+  right: 2%;
+
+  border: 1px solid teal;
+  background: teal;
+  color: white;
+  border-radius: 3px;
+  opacity:0.9;
+  height: auto;
+  width: auto;
+} */
+.show_case {
+  width: auto;
+  border: 1px solid red;
+  border-radius: 5px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center; }
+  .show_case > div {
+    width: calc(100vw/4);
+    height: calc(100vw/4);
+    border-radius: 5px;
+    margin: 3px;
+    border: 1px solid tomato; }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 900px) {
+  .show_case {
+    height: 100%; } }
+
+.overlay {
+  position: absolute;
+  height: calc(100vw/4/12) !important;
+  background: #ff6347;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  margin: -3px !important;
+  opacity: 0.8; }
